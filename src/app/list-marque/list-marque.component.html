@@ -1,0 +1,27 @@
+<div class="container">
+  <br>
+  <button class="btn btn-success" routerLink="/addMarque">+</button>
+  <br>
+  <h1>La page des marques</h1>
+  <br>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Libelle</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of marques">
+          <th scope="row">{{m.id}}</th>
+          <td>{{m.libelle}}</td>
+          <td>
+              <div class="btn btn-primary m-lg-1" routerLink="/updateMarque/{{m.id}}">Modifier</div>
+              <div class="btn btn-danger" (click) ="deleteMarque(m.id)">Supprimer</div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+</div>

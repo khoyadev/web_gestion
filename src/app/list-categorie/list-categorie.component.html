@@ -1,0 +1,28 @@
+<div class="container">
+  <br>
+  <button class="btn btn-success" routerLink="/addCategorie">+</button>
+  <br>
+  <h1>La page des categories </h1>
+  <br>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Libelle</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of categories">
+          <th scope="row">{{c.id}}</th>
+          <td>{{c.libelle}}</td>
+          <td>
+              <div class="btn btn-primary m-lg-1" routerLink="/updateCategorie/{{c.id}}">Modifier</div>
+              <div class="btn btn-danger" (click) ="deleteCategorie(c.id)">Supprimer</div>
+          </td>
+        </tr>
+
+      </tbody>
+  </table>
+</div>
+

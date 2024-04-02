@@ -1,0 +1,44 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "nom": "Doe",
+      "prenom": "John",
+      "age": 30
+    },
+    {
+      "id": "2",
+      "nom": "Smith",
+      "prenom": "Jane",
+      "age": 25
+    }
+  ],
+  "categorie": [
+    {
+      "libelle": "Chaussures",
+      "id": "2"
+    }
+  ],
+  "marque": [
+    {
+      "libelle": "Vitton",
+      "id": "2"
+    }
+  ],
+  "produit": [
+    {
+      "id": "1",
+      "libelle": "Téléphone",
+      "quantite": 10,
+      "categorie": 1,
+      "marque": 1
+    },
+    {
+      "id": "2",
+      "libelle": "Chaussures",
+      "quantite": 20,
+      "categorie": 2,
+      "marque": 2
+    }
+  ]
+}

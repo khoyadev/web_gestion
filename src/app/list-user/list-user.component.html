@@ -1,0 +1,31 @@
+<div class="container">
+  <br>
+  <button class="btn btn-success" routerLink="/addUser">+</button>
+  <br>
+  <h1>La page des users</h1>
+  <br>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Age</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of users">
+          <th scope="row">{{c.id}}</th>
+          <td>{{c.nom}}</td>
+          <td>{{c.prenom}}</td>
+          <td>{{c.age}}</td>
+          <td>
+              <div class="btn btn-primary m-lg-1" routerLink="/updateUser/{{c.id}}">Modifier</div>
+              <div class="btn btn-danger" (click) ="deleteUser(c.id)">Supprimer</div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+</div>

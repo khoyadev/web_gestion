@@ -1,0 +1,16 @@
+<div class="container">
+  <br>
+  <h1>La page {{this.id == null ? 'd\'ajout' : 'modifier'}}   (User)</h1>
+  <br>
+  <form action=""  #values="ngForm"  (ngSubmit)="save(values)">
+      <label for="">Nom</label>
+      <input type="text" class="form-control" [(ngModel)]="nom" name="nom">
+      <label for="">Prenom</label>
+      <input type="text" class="form-control" [(ngModel)]="prenom" name="prenom">
+      <label for="">Age</label>
+      <input type="text" class="form-control" [(ngModel)]="age" name="age">
+      <br>
+      <button type="submit" class="btn btn-success m-lg-1" >{{this.id == null ? 'Ajouter' : 'Modifier'}}</button>
+      <button type="reset" routerLink="/user" class="btn btn-danger">Retour</button>
+  </form>
+</div>
